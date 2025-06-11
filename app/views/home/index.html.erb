@@ -3,25 +3,16 @@
   <head>
     <title>Welcome</title>
     <meta charset="UTF-8">
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        font-family: sans-serif;
-        background-color: #f9f9f9;
-      }
-      .message {
-        text-align: center;
-      }
-    </style>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
-  <body>
-    <div class="message">
-      <h2>🎉 Your Rails SQLite app is live!</h2>
-      <p>Welcome to the application. Everything is set up and running smoothly.</p>
+  <body class="h-screen bg-gray-100 flex items-center justify-center text-center font-sans">
+    <div>
+      <h1 class="text-4xl font-bold mb-4">🎉 Your app is live!</h1>
+      <p class="text-lg text-gray-700 mb-6">Welcome to the application. Everything is set up and running smoothly.</p>
+      <a href="/articles"
+         class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded shadow">
+        Go to Articles
+      </a>
     </div>
   </body>
 </html>
