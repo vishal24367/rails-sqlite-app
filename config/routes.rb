@@ -11,4 +11,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  root to: "home#index"
+
+  get "*path", to: "home#index", via: :all, constraints: -> (request) do
+    request.path.exclude?("/rails") && !request.xhr? && request.format.html?
+  end
 end
